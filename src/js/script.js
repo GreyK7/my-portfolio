@@ -2,8 +2,9 @@ window.addEventListener('DOMContentLoaded', () => {
     const menu = document.querySelector('.menu'),
     menuArea = document.querySelector('.menu__area'),
     menuItem = document.querySelectorAll('.menu__item'),
-    closeMenu = document.querySelector('.menu__close');
+    closeMenu = document.querySelector('.menu__close'),
     hamburger = document.querySelector('.hamburger');
+
 
     hamburger.addEventListener('click', () => {
         menu.classList.add('menu_active');
@@ -20,4 +21,11 @@ window.addEventListener('DOMContentLoaded', () => {
             menu.classList.remove('menu_active');
         })
     })
+})
+
+const counters = document.querySelectorAll('.tools__usage-count'),
+      lines = document.querySelectorAll('.tools__usage-range');
+
+counters.forEach ( (item, i) => {
+    lines[i].style.width = item.innerHTML;
 })
