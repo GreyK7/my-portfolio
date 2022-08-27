@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <section class="promo">
+    <section class="promo" id="up">
         <div class="hamburger">
             <span class="hamburger__item"></span>
             <span class="hamburger__item"></span>
@@ -379,20 +379,24 @@
                     </div>
                     <div class="title title_fz14 contacts__descr">Чи залиште свої контакти та я сама з вами зв'яжуся:</div>
                     <form action="#" class="contacts__form">
-                        <div class="contacts__input">
-                            <label for="name">Ваше ім'я</label>
-                            <input name="name" id="name" type="text">
+                        <div class="contacts__item">
+                            <label for="name" class="contacts__label">Ваше ім'я</label>
+                            <input autocomplete="off" spellcheck="true" name="name" id="name" type="text" class="contacts__input">
                         </div>
-                        <div class="contacts__input">
-                            <label for="email">Ваша пошта</label>
-                            <input name="email" id="email" type="email">
+                        <div class="contacts__item">
+                            <label for="email" class="contacts__label">Ваша пошта</label>
+                            <input autocomplete="off" spellcheck="true" name="email" id="email" type="email" class="contacts__input">
                         </div>
-                        <div class="contacts__textarea">
-                            <label for="message">Ваше повідомлення</label>
-                            <textarea name="message" id="message"></textarea>
+                        <div class="contacts__item-text">
+                            <label for="message" class="contacts__label">Ваше повідомлення</label>
+                            <textarea spellcheck="true" name="message" id="message" class="contacts__textarea"></textarea>
                         </div>   
-                        <div>
+                        <div class="contacts__trigers">
                             <button class="contacts__btn btn">Відправити повідомлення</button>
+                            <div class="contacts__privacy">
+                                <input name="accept" type="checkbox" class="contacts__accept">
+                                <span>Я приймаю політику <a href="#" class="contacts__privacy-link">конфіденційності</a></span>
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -400,6 +404,13 @@
         </div>
     </section>
 
+    <a href="#up" class="back-link">
+        <img src="icons/circle-arrow-up-solid.svg" alt="up" class="back-img">
+    </a>
+
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
